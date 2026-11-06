@@ -25,40 +25,40 @@
 
 ```
 Webb/
-├── backend/                       # Ứng dụng Spring Boot Backend
+├── backend/                       
 │   ├── src/main/java/com/ecommerce/
-│   │   ├── config/                # Cấu hình CORS, Global Exception, DataInitializer (tự động nạp dữ liệu)
-│   │   ├── controller/            # Tiếp nhận Request từ Frontend (REST API)
-│   │   ├── dto/                   # Request/Response DTOs
-│   │   ├── entity/                # 7 Entity JPA ánh xạ Database
-│   │   ├── repository/            # Giao tiếp với MySQL qua Spring Data JPA
-│   │   ├── service/               # Xử lý nghiệp vụ logic (Auth, Product, Cart, Order, Dashboard)
-│   │   └── EcommerceApplication.java # Hàm main khởi động Spring Boot
+│   │   ├── config/               
+│   │   ├── controller/           
+│   │   ├── dto/                  
+│   │   ├── entity/               
+│   │   ├── repository/            
+│   │   ├── service/             
+│   │   └── EcommerceApplication.java 
 │   ├── src/main/resources/
-│   │   └── application.properties # Cấu hình cổng 8080, tài khoản MySQL
-│   └── pom.xml                    # Khai báo thư viện Maven
+│   │   └── application.properties 
+│   └── pom.xml                   
 │
-├── frontend/                      # Ứng dụng ReactJS Frontend (Vite)
-│   ├── public/                    # Tài nguyên tĩnh
+├── frontend/                      
+│   ├── public/                    
 │   ├── src/
-│   │   ├── components/            # Header, Footer, ProductCard, Banner, ProtectedRoute
-│   │   ├── context/               # AuthContext (đăng nhập/phân quyền), CartContext (giỏ hàng thời gian thực)
-│   │   ├── pages/                 # HomePage, ProductListPage, ProductDetailPage, CartPage, CheckoutPage, OrderSuccessPage, OrderHistoryPage, LoginPage, RegisterPage
-│   │   │   └── admin/             # AdminLayout, AdminDashboard, AdminProducts, AdminCategories, AdminOrders, AdminUsers
-│   │   ├── services/              # Axios API clients (api.js, authService, productService, orderService, ...)
-│   │   ├── App.jsx                # Định tuyến React Router DOM
-│   │   ├── App.css                # CSS tùy biến giao diện TechStore
-│   │   └── main.jsx               # Entry point
+│   │   ├── components/           
+│   │   ├── context/              
+│   │   ├── pages/                
+│   │   │   └── admin/             
+│   │   ├── services/              
+│   │   ├── App.jsx               
+│   │   ├── App.css               
+│   │   └── main.jsx               
 │   ├── package.json
 │   └── vite.config.js
 │
-├── database/                      # Kịch bản cơ sở dữ liệu MySQL
-│   ├── schema.sql                 # Script tạo database và 7 bảng chuẩn
-│   └── data.sql                   # Script nạp sẵn 15 sản phẩm mẫu, 5 danh mục, 2 tài khoản demo
+├── database/                    
+│   ├── schema.sql                
+│   └── data.sql                
 │
-├── run-backend.bat                # File chạy nhanh Backend chỉ với 1 click
-├── run-frontend.bat               # File chạy nhanh Frontend chỉ với 1 click
-└── README.md                      # Hướng dẫn chi tiết
+├── run-backend.bat              
+├── run-frontend.bat              
+└── README.md                      
 ```
 
 ---
@@ -79,7 +79,7 @@ Hệ thống đã có sẵn 2 tài khoản mẫu (trên trang Đăng nhập có 
 ### Bước 1: Khởi động MySQL
 1. Khởi động MySQL Server (qua XAMPP, MySQL Workbench hoặc Services trong Windows).
 2. Tạo cơ sở dữ liệu và nạp dữ liệu bằng **1 trong 2 cách**:
-   - **Cách 1 (Khuyên dùng):** Mở MySQL Workbench hoặc Command Line, chạy file:
+   - **Cách 1 (Nên dùng):** Mở MySQL Workbench hoặc Command Line, chạy file:
      - `database/schema.sql` (tạo database và 7 bảng).
      - `database/data.sql` (nạp 15 sản phẩm công nghệ và tài khoản).
    - **Cách 2 (Tự động):** Không cần chạy file SQL! Khi bạn khởi động Backend Spring Boot, lớp `DataInitializer.java` sẽ **tự động kiểm tra và nạp toàn bộ 15 sản phẩm, danh mục và tài khoản mẫu vào MySQL** nếu bảng đang trống.
