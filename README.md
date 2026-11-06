@@ -114,39 +114,7 @@ spring.datasource.password=123456   <-- Đổi thành mật khẩu MySQL trên m
 
 ---
 
-## 5. KỊCH BẢN DEMO BẢO VỆ BÀI TẬP LỚN (GỢI Ý CHO SINH VIÊN)
-
-Khi thuyết trình trước giảng viên, bạn có thể thực hiện theo quy trình 5 bước mạch lạc sau:
-
-1. **Khám phá Trang chủ (Client):**
-   - Giới thiệu Banner khuyến mãi, 4 khối cam kết cửa hàng (Chính hãng, Giao nhanh 2h, Đổi trả 7 ngày).
-   - Danh mục sản phẩm (Laptop, Điện thoại, Tai nghe, Chuột & Phím, Phụ kiện).
-   - Hiển thị danh sách sản phẩm bán chạy, sản phẩm mới về.
-2. **Tìm kiếm, Lọc và Chi tiết sản phẩm:**
-   - Vào thanh tìm kiếm gõ từ khóa: *"MacBook"* hoặc *"Logitech"*.
-   - Lọc sản phẩm theo danh mục và sắp xếp theo giá Tăng dần / Giảm dần.
-   - Nhấp vào xem chi tiết sản phẩm: xem thông số, số lượng tồn kho, tăng giảm số lượng mua.
-3. **Giỏ hàng & Đặt hàng COD:**
-   - Thêm sản phẩm vào giỏ hàng (Huy hiệu giỏ hàng ở Header tự động nhảy số lượng).
-   - Vào Giỏ hàng: thay đổi số lượng, kiểm tra tổng tiền tự động tính lại.
-   - Nhấp **"Tiến hành đặt hàng"** $\to$ Đăng nhập bằng nút nhanh `Khách Hàng (customer)`.
-   - Điền thông tin người nhận, chọn phương thức **Thanh toán tiền mặt khi nhận hàng (COD)** và bấm **"Xác nhận đặt hàng"**.
-   - Màn hình chuyển sang **Đặt hàng thành công** với mã đơn hàng và thông tin đầy đủ.
-   - Kiểm tra **Lịch sử đơn hàng** của tôi: đơn hàng hiển thị trạng thái `Chờ xử lý (PENDING)`.
-4. **Đăng nhập Quản trị viên (Admin Panel):**
-   - Đăng xuất $\to$ Đăng nhập với nút nhanh `Quản Trị (admin)`.
-   - Bấm vào menu **Trang Quản Trị Admin**:
-     - **Dashboard:** Thấy ngay Tổng doanh thu tăng lên, Tổng số đơn hàng tăng, số đơn chờ xử lý.
-     - **Quản lý Đơn hàng:** Xem đơn hàng vừa đặt của khách hàng, nhấp duyệt đơn: chuyển từ `PENDING` $\to$ `CONFIRMED` $\to$ `SHIPPING` $\to$ `DELIVERED`.
-     - **Quản lý Sản phẩm:** Thêm thử 1 sản phẩm mới (có preview ảnh) hoặc sửa giá, xóa sản phẩm.
-     - **Quản lý Danh mục:** Thêm / sửa danh mục sản phẩm.
-     - **Quản lý Người dùng:** Xem danh sách khách hàng và ngày đăng ký.
-5. **Kiểm tra tính toàn vẹn (Database Integrity):**
-   - Chứng minh số lượng tồn kho của sản phẩm tự động bị trừ đi tương ứng sau khi khách đặt mua thành công.
-
----
-
-## 6. DANH SÁCH RESTFUL API HỆ THỐNG
+## 5. DANH SÁCH RESTFUL API HỆ THỐNG
 
 ### Xác thực & Tài khoản (`/api/auth`)
 | Method | Endpoint | Chức năng |
