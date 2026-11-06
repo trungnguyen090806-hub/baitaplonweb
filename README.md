@@ -1,11 +1,3 @@
-# BÀI TẬP LỚN: XÂY DỰNG HỆ THỐNG WEBSITE BÁN HÀNG THƯƠNG MẠI ĐIỆN TỬ (TECHSTORE)
-
-> **Đề tài:** Xây Dựng Hệ Thống Website Bán Hàng Thương Mại Điện Tử  
-> **Đối tượng:** Sinh viên năm 3 - Ngành Công nghệ thông tin  
-> **Mục tiêu:** Xây dựng hệ thống bán hàng trực tuyến hoàn chỉnh, giao diện hiện đại, dễ triển khai, dễ bảo vệ và demo trước giảng viên.
-
----
-
 ## 1. CÔNG NGHỆ SỬ DỤNG
 
 ### Frontend:
